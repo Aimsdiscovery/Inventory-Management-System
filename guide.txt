@@ -1,0 +1,73 @@
+inventory-management-system/
+│
+├── 📁 backend/                      # Node.js + Express API
+│   ├── 📁 config/                   # Configuration (DB, environment, etc.)
+│   │   ├── db.js                    # Database connection
+│   │   └── env.js                   # Environment variables setup
+│   │
+│   ├── 📁 controllers/              # Logic for each route
+│   │   ├── productController.js
+│   │   ├── supplierController.js
+│   │   ├── userController.js
+│   │   └── authController.js
+│   │
+│   ├── 📁 models/                   # Database models (MongoDB or SQL)
+│   │   ├── Product.js
+│   │   ├── Supplier.js
+│   │   ├── User.js
+│   │   └── Transaction.js
+│   │
+│   ├── 📁 routes/                   # Route definitions
+│   │   ├── productRoutes.js
+│   │   ├── supplierRoutes.js
+│   │   ├── userRoutes.js
+│   │   └── authRoutes.js
+│   │
+│   ├── 📁 middlewares/              # Middleware (auth, logging, error handling)
+│   │   ├── authMiddleware.js
+│   │   └── errorMiddleware.js
+│   │
+│   ├── 📁 utils/                    # Helper functions
+│   │   ├── logger.js
+│   │   └── validation.js
+│   │
+│   ├── server.js                    # Entry point for backend
+│   └── package.json
+│
+├── 📁 frontend/                     # Frontend (React / HTML)
+│   ├── 📁 public/
+│   │   └── index.html
+│   │
+│   ├── 📁 src/
+│   │   ├── 📁 components/           # Reusable UI components
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── ProductCard.jsx
+│   │   │
+│   │   ├── 📁 pages/                # Page views
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Products.jsx
+│   │   │   ├── Suppliers.jsx
+│   │   │   ├── Transactions.jsx
+│   │   │   └── Login.jsx
+│   │   │
+│   │   ├── 📁 context/              # Context API (global state)
+│   │   │   └── AuthContext.jsx
+│   │   │
+│   │   ├── 📁 services/             # API calls to backend
+│   │   │   ├── productService.js
+│   │   │   └── authService.js
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   │
+│   └── package.json
+│
+├── 📁 database/                     # SQL scripts or seed data
+│   ├── schema.sql
+│   └── seed.sql
+│
+├── .env                             # Environment variables
+├── .gitignore
+└── README.md
