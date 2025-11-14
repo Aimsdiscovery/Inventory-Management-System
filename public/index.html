@@ -3,10 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Inventory Management system</title>
 </head>
-<body>
-    <h1>Inventory Management System</h1>
-    
+<body class="min-vh-100 w-100">
+    <h2 class="bg-darkblue text-white p-3 m-0">Inventory Management System</h2>
+    <div class="d-flex w-100" style="height: calc(100vh - 80px);">
+        <div class="bg-light text-white p-3 col-3">
+            <ul class="nav flex-column">
+                <li class="nav-item border mb-3 shadow-sm">
+                    <a class="nav-link text-black" href="/api/products">Products</a>
+                </li>
+                <li class="nav-item border mb-3 shadow-sm">
+                    <a class="nav-link text-black" href="/api/purchase">Purchases</a>
+                </li>
+                <li class="nav-item border mb-3 shadow-sm">
+                    <a class="nav-link text-black" href="/api/sales">Sales</a>
+                </li>
+                <li class="nav-item border mb-3 shadow-sm">
+                    <a class="nav-link text-black" href="/api/suppliers">Suppliers</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9">
+            <div class="px-4 h-40">
+                <div class="d-flex justify-content-between py-3 m-0">
+                    <h3 class="mt-2 mb-0">Dashboard</h3>
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="py-2 px-3 bg-white border border-1 border-danger rounded fw-bold">Create Purchase</button>
+                        <button class="py-2 px-3 bg-white border border-1 border-danger rounded fw-bold">Create Sales</button>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between gap-4 align-items-center py-3">
+                    <div class="col border rounded p-2 bg-danger bg-gradient text-white">
+                        <p>Products</p>
+                        <h3 class="fw-bolder">20</h3>
+                    </div>
+                    <div class="col border rounded p-2 bg-danger bg-gradient text-white">
+                        <p>Total Sales</p>
+                        <h3 class="fw-bolder">20</h3>
+                    </div>
+                    <div class="col border rounded p-2 bg-danger bg-gradient text-white">
+                        <p>Total Purchase</p>
+                        <h3 class="fw-bolder">20</h3>
+                    </div>
+                    <div class="col border rounded p-2 bg-danger bg-gradient text-white">
+                        <p>Suppliers</p>
+                        <h3 class="fw-bolder">20</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="px-4 gap-4 d-flex justify-content-between align-items-center h-60">
+                <div class="col p-2 border border-1" style="height: 250px;">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="col p-2 border border-1" style="height: 250px;">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="chart/chartScript.js"></script>
+    <script src="modalView/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
