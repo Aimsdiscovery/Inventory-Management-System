@@ -6,10 +6,26 @@
     height: 60%;
 }
 
+.h-20 {
+    height: 20%;
+}
+
+.h-80 {
+    height: 80%;
+}
+
 .bg-darkblue {
     background-color: #110B3F;
 }
 
 .bg-purple {
     background-color: #6F2E8B;
+}
+
+.my-nav .nav-link.active {
+    background-color: black;
+}
+
+.my-nav .nav-link {
+    color: black;
 }

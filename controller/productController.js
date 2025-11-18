@@ -2,7 +2,14 @@ const db = require('../db')
 
 //read all data
 exports.getAllProduct = (req,res) => {
-    db.query('SELECT* FROM products', (err, results) => {
+    db.query(`SELECT
+                products.product_id,
+                products.product_name,
+                categories.category_name,
+                products.price,
+                products.created_at
+                FROM products
+                join categories ON products.category_id = categories.category_id;`, (err, results) => {
         if(err) throw err;
         res.send(results);
     });
@@ -17,4 +24,3 @@ exports.createNewProduct = (req,res) => {
         res.send({ message: 'Product added'});
     });
 };
-
