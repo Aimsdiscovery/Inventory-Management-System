@@ -13,11 +13,11 @@ function createChart(ctx, data, type) {
     return new Chart(ctx, {
         type: type,
         data: {
-            labels: data.map(r => r.product_id),
+            labels: data.map(r => r.product_name),
             datasets: [{
                 label: 'Quantity of Products',
                 data: data.map(r => r.quantity),
-                backgroundColor: "black",
+                backgroundColor: "#CF3C1F",
                 borderWidth: 1
             }]
         },
